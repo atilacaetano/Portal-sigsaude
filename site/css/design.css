@@ -1,0 +1,155 @@
+nav a img {
+  width: 150px;
+  padding: 5px;
+}
+
+@media (max-width: 576px) {
+    nav a img {
+        margin-right: 10px;
+    }
+}
+.btn {
+    font-size: 0.875rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    border-radius: 20px;
+    padding: .6rem 1.3rem;
+    background-color: #008080;
+    border-color: #008080;
+    box-shadow: none;
+}
+/* Entrar (box) */
+.btn-primary:hover {
+    background-color: #fff;
+    color: #fff;
+    font-weight: 700;
+    background-color: #0097a8;
+    border-color: #0097a8;
+}
+
+/* Primeiro quadrante verde */
+.bg-overlay {
+    position: absolute;
+    content: "";
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    background: #008080;
+    opacity: .8;
+}
+
+/*Segundo quadrante verde*/
+#features {
+    background: url("../img/bg/logos-bg.jpg") fixed 50% 50%;
+    -webkit-background-size: cover;
+    background-size: cover;
+    background: #008080;
+    margin: left;
+}
+
+/*Número de contato*/
+.paralax-content h6 {
+    font-size: 40px;
+    color: #008080;
+}
+
+.time-box:hover {
+    /*-webkit-box-shadow: 0px 12px 10px 7px rgba(0, 0, 0, 0.04);
+    box-shadow: 0px 12px 10px 7px rgba(0, 0, 0, 0.04);
+    -moz-transform: scale(1.1);
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);*/
+    box-shadow: none;
+    background: #008080;
+    border-radius: 5px;
+    font-weight: 700;
+}f
+
+.feature-style-2:hover {.border-left {
+  border-left: 1px solid #dee2e6 !important;
+}
+    border-color: #008080;
+}
+.feature-style-2:hover h4 {
+    color: #008080;
+}
+
+.feature-style-2:hover i {
+    background: #008080;
+    color: #fff;
+}
+/*Agende sua consulta (box) */
+.btn.btn-black {
+    color: #008080;
+    background-color: #fff;
+}
+
+/*Agende sua consulta (box) */
+.btn-black:hover {
+    color: #fff;
+    background-color: #005C5C;
+    font-weight: 700;
+}
+
+/*Todos os serviços (box) */
+.btn.btn-hero {
+    color: #fff;
+    background-color: #008080;
+}
+
+.btn-hero:hover {
+    color: #fff;
+    background-color: #0097a8;
+    font-weight: 700;
+}
+
+/*No final... "read more" (box) */
+.btn-trans-black:hover,
+.btn-trans-black {
+    background-color: transparent;
+    border: 1px solid rgba(0, 0, 0, .15);
+    color: #008080;
+    letter-spacing: 1px;
+    font-weight: 700;
+}
+
+/*Datas das notícias*/
+.news-content h6 span {
+    color: #008080;
+}
+
+/*Espaçamea:hovernto do menu antes do "Entrar"*/
+.navbar-expand-lg .navbar-nav .nav-link {
+    padding-right: 1.0rem;
+    padding-left: 1.0rem;
+}
+
+/*Palavras no final do site*/
+a {
+  color: #000;
+  text-decoration: none;
+  background-color: transparent;
+ /* -webkit-text-decoration-skip: objects;*/
+}
+
+a:hover {
+    color: #008080;
+    text-decoration: none;
+}
+
+.bg-light {
+  background-color: #fff !important;
+}
+
+.about-img {
+    position: relative;
+    width: 570px;
+    height: 342px;
+}
+
+.d-flex {
+  display: -webkit-box !important;
+  display: -ms-flexbox !important;
+  /* display: flex !important; */
+}

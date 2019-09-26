@@ -1,0 +1,1236 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org"
+	xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3"
+	xmlns:layout="http://www.ultraq.net.nz/web/thymeleaf/layout">
+<head>
+
+	<meta charset="utf-8"></meta>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"></meta>
+	<meta name="description" content=""></meta>
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"></meta>
+	<meta name="robots" content="all,follow"></meta>
+	<meta name="description" content=""></meta>
+	<meta name="author" content=""></meta>
+
+
+	<title>SigSaúde | Sistema de Saúde</title>
+
+    <!-- Favicon-->
+    <link rel="shortcut icon" href="img/simbolo.png"/>
+    
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="site/bootstrap/css/bootstrap.css" type="text/css">
+
+    <!--  CUSTOM STYLE  -->
+    <link rel="stylesheet" href="site/css/icofont.css" type="text/css">
+    <link rel="stylesheet" href="site/css/style.css" type="text/css">
+    <link rel="stylesheet" href="site/css/animate.css" type="text/css">
+    <link rel="stylesheet" href="site/css/design.css" type="text/css">
+    <link rel="stylesheet" href="site/css/card_clinicas.css" type="text/css">
+    <link rel="stylesheet" href="site/css/accessibility.css" type="text/css">
+    <link rel="stylesheet" href="site/css/buttons.css" type="text/css">
+    <!-- <link rel="stylesheet" href="site/css/navbar.scss}" type="text/css"> -->
+    <link rel="stylesheet" href="site/css/sticky_footer.css" type="text/css">
+    <link rel="stylesheet" href="site/css/font-awesome.min.css" type="text/css">
+    <!-- <link rel="stylesheet" href="site/css/reboot.scss}" type="text/css"> -->
+
+    <!-- Bootstrap CSS -->
+	
+	
+    
+
+    <!--  FONT -->
+    <link href="site/fonts/IonIcons/stylesheet.css" rel="stylesheet" type="text/css">    
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://anandchowdhary.github.io/ionicons-3-cdn/icons.css" integrity="sha384-+iqgM+tGle5wS+uPwXzIjZS5v6VkqCUV7YQ/e/clzRHAxYbzpUJ+nldylmtBWCP0" crossorigin="anonymous">
+
+    
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="numscroller-1.0.js"></script>
+    <script src="site/js/jquery.min.js"></script>
+    <script src="site/bootstrap/js/popper.min.js"></script>
+    
+    <script src="site/js/jquery.easing.1.3.min.js"></script>
+    <script src="site/js/scripts.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+	
+</head>
+<body id="page-top" data-spy="scroll" data-target=".fixed-top">
+	
+
+	<div class="bg-lightt">
+       
+	       <div id="fixed-top">
+			    <div id="accessibility"> 
+			    	<div class="container">
+			    		<div class="row">
+                           <div class="col">
+                                <div class="float-left justify-content-start align-items-stretch flex-nowrap  d-none d-lg-flex">
+				    				<a target="_blank" class="instituicao" href="http://www.ufrn.br" title="UFRN"><img src="site/img/ufrn_cinza.png" width="52"></a>
+				    				<a target="_blank" class="instituicao d-none d-lg-block border-left" href="http://imd.ufrn.br" title="Instituto Metrópole Digital">IMD</a> <script src="assets/js/accessibillity.js"></script>  
+				    			</div>
+			    			    <div class="d-flex justify-content-end align-items-center h-100">
+				    				<a href="#main" class="sr-only sr-only-focusable" accesskey="1">Ir para o conteúdo principal [Alt + 1]</a>
+							        <a href="#fixed-top" class="sr-only sr-only-focusable" accesskey="2">Ir para início do Menu [Alt + 2]</a>
+							        <a href="#" class="btn btn-lightt btn-onlyicon btn-sm" accesskey="3" onclick="window.increaseFontSize()" onkeydown="window.increaseFontSize()" title="Aumentar tamanho da letra">+A<span class="sr-only">Aumentar tamanho da letra [Alt + 3]</span></a>
+							        <a href="#" class="btn btn-lightt btn-onlyicon btn-sm" accesskey="4" onclick="window.resetFontSize()" onkeydown="window.resetFontSize()" title="Tamanho da letra normal">A<span class="sr-only">Tamanho da letra normal [Alt + 4]</span></a>
+							        <a href="#" class="btn btn-lightt btn-onlyicon btn-sm" accesskey="5" onclick="window.decreaseFontSize()" onkeydown="window.decreaseFontSize()" title="Reduzir tamanho da letra">-A<span class="sr-only">Reduzir tamanho da letra [Alt + 5]</span></a>
+							        <a href="#" class="btn btn-lightt btn-onlyicon btn-sm" accesskey="6" onclick="window.toggleContrast()" onkeydown="window.toggleContrast()" title="Alto contraste"><i class="fa fa-fw fa-adjust"></i><span class="sr-only">Alto contraste [Alt + 6]</span></a>
+			    				</div>
+			    			</div>
+				    </div>
+			    </div>
+            </div>
+        </div>
+     </div>
+     
+     <header class="home2">
+        <nav class="navbar fixed-top navbar-expand-md site-navigation bg-light">
+            <div class="container">
+
+                <!-- Tentando fazer o menu recursivo 
+
+                 <nav class="navbar navbar-expand-lgn site-navigation bg-light" style="box-shadow: 0px 0px 13px #0000009c;">
+		        	
+		            <div class="container">
+		                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Abrir ou fechar navegação" style="padding-top: 1.25rem;color: #737f54;">
+		                    <span class="navbar-toggler-icon"><i class="fa fa-bars" aria-hidden="true"></i></span>
+		                </button>
+		                <a class="navbar-brand" href="/jerimumjobs/"><img class="on-contrast-force-white" src="/jerimumjobs/img/logos/jerimum_logo.png" alt="Logotipo Jerimum Jobs"></a>
+		                <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+		                    <ul class="navbar-nav col-5 p-0 justify-content-between">
+		                        <li class="nav-item">
+		                            <a class="nav-link text-secondary" href="/jerimumjobs/empresa/listar">Empresas</a>
+		                        </li>
+		                        <li class="nav-item">
+		                            <a class="nav-link text-secondary" href="/jerimumjobs/oportunidade/listar">Oportunidades</a>
+		                        </li>
+		                        <li class="nav-item">
+		                            <a class="nav-link text-secondary" href="/jerimumjobs/sobre">Sobre</a>
+		                        </li>
+		                        <li class="nav-item">
+		                        	<a class="btn btn-primary" href="/jerimumjobs/login" title="Entrar">Entrar</a>	
+								</li>
+								
+		                    </ul>
+		                    
+		                </div>
+		            </div>
+		        </nav>
+
+                -->
+                
+                <button class="navbar-toggler" type="button" data-toggle="collapse" onclick="myFunction()" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" style="padding-top: 1.25rem;color: #008080;">
+		        	<span class="navbar-toggler-icon"><i class="fa fa-bars" aria-hidden="true"></i></span>
+		        </button>
+             
+                <a class="navbar-brand" href="#">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-collapse" aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+                </button></a>
+                
+                
+                <a class="navbar-brand" href="#">
+                	<img class="on-contrast-force-white" src="site/img/versaohorizontal2.png" alt="Logotipo SigSaude">
+                </a>
+                
+                <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+                    <!--<ul class="navbar-nav ml-auto">-->
+                        <ul class="navbar-nav col-5 p-0 justify-content-between">
+                        <li class="nav-item dropdown active page-scroll"> 
+                            
+                           <!-- OPÇÕES DO HOME (setinha que dá opções abaixo)-- 
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Home
+                            </a>
+                            
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                <a class="dropdown-item" href="index-2.html">Home1</a>
+                                <a class="dropdown-item" href="index2.html">Home2</a>
+                                <a class="dropdown-item" href="index3.html">Home3</a>
+                            </div>
+                            -->
+                        </li>
+            
+                        <li class="nav-item">
+                            <a class="nav-link page-scroll" href="#section-about">Sobre</a>
+                        </li>                        
+                        
+                        <li class="nav-item">
+                            <a class="nav-link page-scroll" href="#services">Galeria</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link page-scroll" href="#features">Módulos</a>
+                        </li>
+
+                            <!--  <li class="nav-item">
+                                  <a class="nav-link page-scroll" href="#blog">Notícias</a>
+                              </li>-->
+                         <li class="nav-item">
+                            <a class="nav-link page-scroll" href="#clinics">Serviços</a>
+                         </li>
+
+                         <li class="nav-item">
+                            <a class="nav-link page-scroll" href="#parallax2">Contato</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="btn btn-primary" href="http://www.sigsaude.imd.ufrn.br">Entrar</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    
+    <!-- Banner start    -->
+    <section class="banner-main2">
+       <div class="bg-overlay"></div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 col-sm-8 m-auto">
+                    <div class="banner-content content-padding text-center text-white">
+                        <h5>Serviços-Escola</h5>
+                        <div class="slider-info">
+                            <div class="">
+                                <h1>Sua saúde <span>é nossa prioridade</span></h1>                        
+                            </div>
+                            <!-- <div class="slide2">
+                                <h1>Sua saúde <span>é nossa prioridade</span></h1>                        
+                            </div> -->
+                        </div>
+                        <p>Venha usufruir do sistema público de saúde da UFRN!</p>
+                        <a href="http://www.sigsaude.imd.ufrn.br" class="btn btn-black ">Acesse o sistema agora!</a>
+                        <!-- <a href="#" class="btn btn-white ">Services</a> -->
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+    <!-- Banner End  -->
+    
+    <!-- Segunda Parte -->
+    <section id="section-about" class="section-padding bg-light">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-6 col-sm-6">
+					<img src="site/img/mockup.jpg" class="img-responsive">
+                </div>
+				<div class="col-md-6 col-sm-6">                    
+
+                            <h2>Quem somos?</h2>
+                            <p class="lead">
+                                Somos um conjunto de serviços-escola de saúde integrados numa plataforma computacional que serve à melhoria da gestão de processos e otimização de dados clínicos para fins de pesquisa e formação acadêmica.
+                            </p>
+                                     
+				</div>
+			</div>
+		</div>
+	</section>
+    <!-- Segunda End -->
+    
+    <!-- SECTION TESTE -->
+	<section id="dados" class="counter section-padding-100" data-stellar-background-ratio="0.2">
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-6 col-md-3">
+					<div class="fun-fact text-center tab-margin-bottom">
+						<i class="fas fa-users"></i>
+						<h3><span class='numscroller' data-min='0' data-max='1000' data-delay='5' data-increment='1'>1000</span></h3>
+						<p>Usuários cadastrados</p>
+					</div>
+				</div>
+				<div class="col-sm-6 col-md-3">
+					<div class="fun-fact text-center tab-margin-bottom">
+						<i class="fas fa-user-md"></i>
+						<h3><span class='numscroller' data-min='0' data-max='1000' data-delay='5' data-increment='1'>1000</span></h3>
+						<p>Profissionais</p>
+					</div>
+				</div>
+				<div class="col-sm-6 col-md-3">
+					<div class="fun-fact text-center tab-margin-bottom">
+						<i class="fas fa-stethoscope"></i>
+						<h3><span class='numscroller' data-min='0' data-max='1000' data-delay='5' data-increment='1'>1000</span></h3>
+						<p>Procedimentos</p>
+					</div>
+				</div>
+				<div class="col-sm-6 col-md-3">
+					<div class="fun-fact text-center tab-margin-bottom">
+						<i class="fas fa-heartbeat"></i>
+						<h3><span class='numscroller' data-min='0' data-max='1000' data-delay='5' data-increment='1'>2000</span></h3>
+						<p>Especialidades</p>
+					</div>
+				</div>
+				<!--  <div class="col-sm-6 col-md-2">
+					<div class="fun-fact text-center tab-margin-bottom">
+						<i class="fas fa-hospital"></i>
+						<h3><span class="cp-counter">50</span></h3>
+						<p>Clinicas escolas</p>
+					</div>-->
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- SECTION TESTE -->
+	
+	
+	
+	<!-- SERVICE START -->
+    <section id="services" class="bg-light">
+        <div class="container-fluid">
+             <div class="row">
+                <div class="col-md-12 col-sm-12">
+                    <div class="heading text-center">
+                        <h2>Galeria</h2>
+                        <p>Navegue pela galeria de fotos dos serviços-escola.</p>
+                    </div>
+                </div>
+                
+                        
+		
+		        <div class="mr-auto ml-auto">
+		            <ul class="filters">
+	                	<li class="filter-button active" data-filter="all">Todos</li>
+	                	<li class="filter-button" data-filter="hdpe">PROAE</li>
+	                	<li class="filter-button" data-filter="sprinkle">FACISA</li>
+	                	<li class="filter-button" data-filter="spray">CCHLA</li>
+	                	<li class="filter-button" data-filter="irrigation">CCS</li>
+                	</ul>    
+		        </div>
+		        
+			</div>
+			
+			<div class="row">
+                    <div class="gallery_product col-md-3 col-sm-12 filter hdpe sprinkle" data-bound="" style="display: inline-block;">
+                        <div class="effect">
+                            <img src="site/img/galeria/img5.jpeg" alt="" class="img-responsive">
+                            <figcaption>
+                                <h2>CETO</h2>
+                                <p>Clínica Escola de Terapias Orientais.</p>                                                           
+                            </figcaption>			
+                        </div>		            		                
+		            </div>
+		            
+                    <div class="gallery_product col-md-3  col-sm-12 filter hdpe" data-bound="" style="display: inline-block;">
+                        <div class="effect">
+                                <img src="site/img/galeria/img8.jpeg" alt="" class="img-responsive">
+                                <figcaption>
+                                    <h2>CETO</h2>
+                                    <p>Clínica Escola de Terapias Orientais.</p>                                                           
+                                </figcaption>			
+                        </div>		                
+		            </div>
+		            
+		            <div class="gallery_product col-md-3 col-sm-12 filter sprinkle" data-bound="" style="display: inline-block;">
+                            <div class="effect">
+                                <img src="site/img/galeria/img7.jpeg" alt="" class="img-responsive">
+                                <figcaption>
+                                    <h2>CETO</h2>
+                                    <p>Clínica Escola de Terapias Orientais.</p>                                                           
+                                </figcaption>			
+                            </div>                            
+		            </div>
+		
+		            <div class="gallery_product col-md-3  col-sm-12 filter sprinkle spray hdpe" data-bound="" style="display: inline-block;">
+                            <div class="effect">
+                                <img src="site/img/galeria/img1.jpeg" alt="" class="img-responsive">
+                                <figcaption>
+                                    <h2>CETO</h2>
+                                    <p>Clínica Escola de Terapias Orientais.</p>                                                           
+                                </figcaption>			
+                            </div>
+		            </div>
+		
+		            <div class="gallery_product col-md-3  col-sm-12 filter irrigation hdpe" data-bound="" style="display: inline-block;">
+                            <div class="effect">
+                                    <img src="site/img/galeria/img2.jpeg" alt="" class="img-responsive">
+                                    <figcaption>
+                                        <h2>CETO</h2>
+                                        <p>Clínica de Fisioterapia.</p>                                                           
+                                    </figcaption>			
+                            </div>
+		            </div>
+		
+		            <div class="gallery_product col-md-3  col-sm-12 filter irrigation spray sprinkle" data-bound="" style="display: inline-block;">
+                            <div class="effect">
+                                    <img src="site/img/galeria/img3.jpeg" alt="" class="img-responsive">
+                                    <figcaption>
+                                        <h2>DOD</h2>
+                                        <p>Departamento de Odontologia.</p>                                                           
+                                    </figcaption>			
+                            </div>		            
+		            </div>
+		
+		            <div class="gallery_product col-md-3  col-sm-12 filter irrigation spray" data-bound="" style="display: inline-block;">
+                            <div class="effect">
+                                    <img src="site/img/galeria/img4.jpeg" alt="" class="img-responsive">
+                                    <figcaption>
+                                        <h2>DNUT</h2>
+                                        <p>Departamento de Nutrição.</p>                                                           
+                                    </figcaption>			
+                            </div>
+		            </div>
+		
+		            <div class="gallery_product col-md-3  col-sm-12 filter irrigation spray" data-bound="" style="display: inline-block;">
+                            <div class="effect">
+                                    <img src="site/img/galeria/img6.jpeg" alt="" class="img-responsive">
+                                    <figcaption>
+                                        <h2>DOD</h2>
+                                        <p>Departamento de Odontologia.</p>                                                           
+                                    </figcaption>			
+                            </div>
+		            </div>		            
+		            		           
+		        </div>
+        </div>
+    </section>
+    <!-- SERVICE END -->
+    
+    <!-- FEATURES MAIN START   -->
+	<section id="features" class="section-padding">
+	    <div class="container">
+	    	<div class="row">
+                <div class="col-md-12 col-sm-12">
+                    <div class="heading text-center">
+                        <h2>Módulos</h2>
+                        <p>Conheça os diversos módulos que compõe o SigSaúde.</p>
+                    </div>
+                </div>
+            </div>
+	        <div class="row">
+                <div class="col-md-4 col-sm-4">
+	                <div class="feature-box text-center" tabindex="0" data-toggle="popover" data-trigger="focus" data-popover-content="#a1" data-placement="top">                            
+	                    <i class="fas fa-graduation-cap"></i>
+	                    <h4>Acadêmico</h4>
+	                     <!-- <p>Eaqueuga quisquam quam dolor nihil cumque ipsum assumenda modi.</p> -->
+                    </div>
+                    <div id="a1" class="hidden">
+                        <div class="popover-heading">Acadêmico</div>
+                            
+                        <div class="popover-body">
+                            <ul>
+                                <li>Gestão das turmas, professores e alunos dos Serviços-Escola</li>
+                            </ul>
+                        </div>
+                    </div> 
+                </div>
+                
+                <div class="col-md-4 col-sm-4">                            
+	                <div class="feature-box text-center" tabindex="0" data-toggle="popover" data-trigger="focus" data-popover-content="#a2" data-placement="top">
+	                    <i class="fas fa-calendar"></i>
+	                    <h4>Agendamento</h4>
+	                    <!-- <p>Eaqueuga quisquam quam dolor nihil cumque ipsum assumenda modi.</p> -->
+                    </div>
+                    <div id="a2" class="hidden">
+                            <div class="popover-heading">Agendamento</div>
+                                
+                            <div class="popover-body">
+                                <ul>
+                                    <li>Controle dos agendamentos das consultas;</li>
+                                    <li>Agendamento 100% online;</li>
+                                    <li>Otimização do processo de agendamento de consultas da clínica;</li>
+                                </ul>
+                            </div>
+                    </div>
+	            </div>
+                <div class="col-md-4 col-sm-4">
+	                <div class="feature-box text-center" tabindex="0" data-toggle="popover" data-trigger="focus" data-popover-content="#a3" data-placement="top">
+	                    <i class="fas fa-hospital-alt"></i>
+	                    <h4>Atendimento</h4>
+	                     <!-- <p>Eaqueuga quisquam quam dolor nihil cumque ipsum assumenda modi.</p> -->
+	                </div>
+	                <div id="a3" class="hidden">
+                            <div class="popover-heading">Atendimento</div>
+                                
+                            <div class="popover-body">
+                                <ul>
+                                    <li>Otimização no tempo de atendimento aos pacientes;</li>
+                                    <li>Prontuário 100% eletrônico e seguro;</li>
+                                    <li>Criação de prontuários específicos para cada Especialidade;</li>
+                                </ul>
+                            </div>
+                    </div>
+	            </div>
+                <div class="col-md-4 col-sm-4">
+	                <div class="feature-box text-center" tabindex="0" data-toggle="popover" data-trigger="focus" data-popover-content="#a4" data-placement="top">
+	                    <i class="fas fa-chart-pie"></i>
+	                    <h4>Dados</h4>
+	                     <!-- <p>Eaqueuga quisquam quam dolor nihil cumque ipsum assumenda modi.</p> -->
+	                </div>
+	                <div id="a4" class="hidden">
+                            <div class="popover-heading">Dados</div>
+                                
+                            <div class="popover-body">
+                                <ul>
+                                    <li>Controle e direcionamento da gestão através da emissão de:
+	                                    <ul>
+	                                    	<li>Relatórios;</li>
+	                                    	<li>Gráficos;</li>
+	                                    </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                    </div>
+	            </div>
+                <div class="col-md-4 col-sm-4">
+	                <div class="feature-box text-center" tabindex="0" data-toggle="popover" data-trigger="focus" data-popover-content="#a5" data-placement="top">
+	                    <i class="fas fa-user-md"></i>
+	                    <h4>Equipe profissional</h4>
+	                     <!-- <p>Eaqueuga quisquam quam dolor nihil cumque ipsum assumenda modi.</p> -->
+	                </div>
+	                <div id="a5" class="hidden">
+                            <div class="popover-heading">Equipe Profissional</div>
+                                
+                            <div class="popover-body">
+                                <ul>
+                                    <li>Gestão dos Profissionais de Saúde e Colaboradores da clínica;</li>
+                                    <li>Gestão das Escalas de trabalho dos Profissionais de Saúde da clínica;</li>
+                                    <li>Controle da produtividade da equipe profissional;</li>
+                                </ul>
+                            </div>
+                    </div>
+	            </div>
+	            
+	            <div class="col-md-4 col-sm-4">
+	                <div class="feature-box text-center" tabindex="0" data-toggle="popover" data-trigger="focus" data-popover-content="#a6" data-placement="top">
+	                    <i class="fas fa-user"></i>
+	                    <h4>Usuário de Serviço</h4>
+	                    <!-- <p>Eaqueuga quisquam quam dolor nihil cumque ipsum assumenda modi.</p> -->
+	                </div>
+	                <div id="a6" class="hidden">
+                            <div class="popover-heading">Usuário de Serviço</div>
+                                
+                            <div class="popover-body">
+                                <ul>
+                                    <li>Cadastro de pacientes 100% digital;</li>
+                                    <li>Cadastro único para todas as clínicas da UFRN;</li>
+                                    <li>Emissão de relatórios sobre os quantitativos de pacientes cadastrados;</li>
+                                </ul>
+                            </div>
+                    </div>
+	            </div>	            
+	            
+	        </div>
+	    </div>
+	</section>
+	<!-- FEATURES MAIN END   -->
+	
+    <!--SECTION CLINICS-->
+    <section id="clinics" class="bg-white">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-12 col-sm-12">
+                    <div class="heading text-center">
+                        <h2>Serviços-Escola</h2>
+                        <p>Conheça as clínicas escolas que utilizam o SigSaúde.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="container">
+
+                        <div id="myCarousel" class="carousel slide" data-ride="carousel">
+                            <div class="carousel-inner row w-100 mx-auto">
+
+                                <div class="carousel-item col-md-4 active">
+                                    <div class="card service">
+                                        <div class="image_service">
+                                            <img src="https://scontent.frec10-1.fna.fbcdn.net/v/t1.0-9/20992720_1652716201428268_7514421742851015692_n.png?_nc_cat=108&amp;_nc_oc=AQmd8qI-Axs_xcBcSdcsnMwZGYFJoH6EI3JWr1JkIrlM4FSPy51o9k1orCUZMS0qjCQ&amp;_nc_ht=scontent.frec10-1.fna&amp;oh=b63f5efece1555183450fea3381529af&amp;oe=5DC574EC"
+                                                 alt="Strawberry Waffle" />
+                                        </div>
+                                        <div class="card-body">
+                                            <div class="row-wrapper">
+                                                <h3 class="recipe-title">Clínica Escola da Escola Multicampi de Ciências Médicas.</h3>
+                                            </div>
+                                            <hr>
+                                            <div class="row atendimento-valor">
+                                                <div class="col-md-6">
+                                                    <i class="ion ion-ios-clock-outline"></i><span class="value">7h - 18h</span>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <i class="ion ion-ios-calendar-outline"></i><span class="value">Seg-Sex</span>
+                                                </div>
+                                            </div>
+                                            <div class="row atendimento-title">
+                                                <div class="col-md-6">
+                                                    <span class="title">Horario</span>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <span class="title">Dias</span>
+                                                </div>
+                                            </div>
+                                            <h5>Principais atendimentos</h5>
+                                            <p class="card-text especialidades">Pediatria, Psiquiatria, Endocrinologia, Gastroenterologia, Hepatologia, Ortopedia, Reumatologia, Dermatologia, Geriatria e Ginecologia.</p>
+                                            <footer class="content__footer">
+                                                <div class="row">
+                                                    <div class="col-md-12">
+                                                        <a href="https://goo.gl/maps/GWi89VsW3bipr5y36" target="_blank"><i class="ion ion-ios-map-outline"><span class="value">Rua Dr.Renato Dantas, S/N - Centro - Caicó/RN</span></i></a>
+                                                    </div>
+                                                </div>
+                                                <div class="row" style="margin-top: 10px;">
+                                                    <div class="col-md-12">
+                                                        <i class="ion ion-ios-call-outline"><span class="value">(84)33422337/(84)992296568</span></i>
+                                                    </div>                                                    
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-md-5 ml-auto">
+                                                        <a href="#" rel="Ver mais">Saiba mais</a>
+                                                    </div>
+                                                </div>
+                                            </footer>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="carousel-item col-md-4">
+                                    <div class="card service">
+                                        <div class="image_service">
+                                            <img src="https://scontent.frec10-1.fna.fbcdn.net/v/t1.0-9/20992720_1652716201428268_7514421742851015692_n.png?_nc_cat=108&amp;_nc_oc=AQmd8qI-Axs_xcBcSdcsnMwZGYFJoH6EI3JWr1JkIrlM4FSPy51o9k1orCUZMS0qjCQ&amp;_nc_ht=scontent.frec10-1.fna&amp;oh=b63f5efece1555183450fea3381529af&amp;oe=5DC574EC"
+                                                 alt="Strawberry Waffle" />
+                                        </div>
+                                        <div class="card-body">
+                                            <div class="row-wrapper">
+                                                <h3 class="recipe-title">Clínica Escola de Terapias Orientais (CETO)</h3>
+                                            </div>
+                                            <hr>
+                                            <div class="row atendimento-valor">
+                                                <div class="col-md-6">
+                                                    <i class="ion ion-ios-clock-outline"></i><span class="value">8h - 18h</span>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <i class="ion ion-ios-calendar-outline"></i><span class="value">Seg-Sex</span>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-md-6">
+                                                    <span><small style="font-size: 10px">12h-14h(almoço)</small></span>
+                                                </div>
+                                                <div class="col-md-6">
+
+                                                </div>
+                                            </div>
+                                            <div class="row atendimento-title">
+                                                <div class="col-md-6">
+                                                    <span class="title">Horario</span>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <span class="title">Dias</span>
+                                                </div>
+                                            </div>
+                                            <h5>Principais atendimentos</h5>
+                                            <p class="card-text especialidades">Técnicas da Medicina Tradicional Chinesa como acupuntura, auriculoterapia, ...
+                                                <button class="btn btn-link btn-sm btn-hide" type="button" data-toggle="collapse" data-target="#espec1" aria-expanded="false" aria-controls="collapseExample">
+                                                    Ver mais
+                                                </button>
+                                            </p>
+                                            <div class="collapse" id="espec1">
+                                                <div class="card card-body">
+                                                    <p class="card-text especialidades">shiatsu express, shiatsu facial, reflexologia de mãos e podal, moxabustão, guasha, tuiná, ventosaterapia e shantala, estágio e habilitação em acupuntura, projetos de extensão, monitoria, integrados e colaboração com pesquisa.</p>
+                                                </div>
+                                            </div>
+                                            </p>
+                                            <footer class="content__footer">
+                                                <div class="row">
+                                                    <div class="col-md-12">
+                                                        <a href="https://goo.gl/maps/H9frpNU25Gf9FBUt5" target="_blank"><i class="ion ion-ios-map-outline"><span class="value">Campus universitário, Av. Senador Salgado Filho, 3000 – Lagoa Nova, Sala do CETO</span></i></a>
+
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-md-12">
+                                                        <i class="ion ion-ios-call-outline"><span class="value">32153400/Ramal 264</span></i>
+                                                    </div>                                                    
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-md-5 ml-auto">
+                                                        <a href="#" rel="Ver mais">Saiba mais</a>
+                                                    </div>
+                                                </div>
+                                            </footer>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="carousel-item col-md-4">
+                                    <div class="card service">
+                                        <div class="image_service">
+                                            <img src="https://scontent.frec10-1.fna.fbcdn.net/v/t1.0-9/20992720_1652716201428268_7514421742851015692_n.png?_nc_cat=108&amp;_nc_oc=AQmd8qI-Axs_xcBcSdcsnMwZGYFJoH6EI3JWr1JkIrlM4FSPy51o9k1orCUZMS0qjCQ&amp;_nc_ht=scontent.frec10-1.fna&amp;oh=b63f5efece1555183450fea3381529af&amp;oe=5DC574EC"
+                                                 alt="Strawberry Waffle" />
+                                        </div>
+                                        <div class="card-body">
+                                            <div class="row-wrapper">
+                                                <h3 class="recipe-title" style="margin-bottom: 30px">Clínica Escola de Fonoaudiologia</h3>
+                                            </div>
+                                            <hr>
+                                            <div class="row atendimento-valor">
+                                                <div class="col-md-6">
+                                                    <i class="ion ion-ios-clock-outline"></i><span class="value">7h - 18h</span>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <i class="ion ion-ios-calendar-outline"></i><span class="value">Seg-Qui</span>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-md-6">
+                                                    <span><small style="font-size: 10px">7h-17h</small></span>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <span><small style="font-size: 10px">Sexta-Feira</small></span>
+                                                </div>
+                                            </div>
+                                            <div class="row atendimento-title">
+                                                <div class="col-md-6">
+                                                    <span class="title">Horario</span>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <span class="title">Dias</span>
+                                                </div>
+                                            </div>
+                                            <h5>Principais atendimentos</h5>
+                                            <p class="card-text especialidades">Audiologia, Linguagem, Motricidade Orofacial, Disfagia e Voz.
+                                            </p>
+                                            <div class="collapse" id="espec2">
+                                                <div class="card card-body">
+                                                    <p class="card-text especialidades">enfermagem em saúde do adulto, em saúde do idoso.</p>
+                                                </div>
+                                            </div>
+                                            </p>
+                                            <footer class="content__footer">
+                                                <div class="row">
+                                                    <div class="col-md-12">
+                                                        <a href="https://goo.gl/maps/pNKHxZXGoVPtisTA8" target="_blank"><i class="ion ion-ios-map-outline"><span class="value">Rua General Cordeiro de Faria, Petrópolis-Natal/RN, CEP:59012-570</span></i></a>
+                                                    </div>
+                                                </div>
+                                                <div class="row" style="margin-top: 5px;">
+                                                    <div class="col-md-12">
+                                                        <i class="ion ion-ios-call-outline"><span class="value">(84) 3342-9757 (audiologia), (84) 3342-9755 (fonoterapia), (84) 99224-0100</span></i>
+                                                    </div>                                                    
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-md-5 ml-auto">
+                                                        <a href="#" rel="Ver mais">Saiba mais</a>
+                                                    </div>
+                                                </div>
+                                            </footer>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="carousel-item col-md-4">
+                                    <div class="card service">
+                                        <div class="image_service">
+                                            <img src="https://scontent.frec10-1.fna.fbcdn.net/v/t1.0-9/20992720_1652716201428268_7514421742851015692_n.png?_nc_cat=108&amp;_nc_oc=AQmd8qI-Axs_xcBcSdcsnMwZGYFJoH6EI3JWr1JkIrlM4FSPy51o9k1orCUZMS0qjCQ&amp;_nc_ht=scontent.frec10-1.fna&amp;oh=b63f5efece1555183450fea3381529af&amp;oe=5DC574EC"
+                                                 alt="Strawberry Waffle" />
+                                        </div>
+                                        <div class="card-body">
+                                            <div class="row-wrapper">
+                                                <h3 class="recipe-title">Coordenadoria de Atenção à Saúde do Servidor (CAS)</h3>
+                                            </div>
+                                            <hr>
+                                            <div class="row atendimento-valor">
+                                                <div class="col-md-6">
+                                                    <i class="ion ion-ios-clock-outline"></i><span class="value">7h - 19h</span>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <i class="ion ion-ios-calendar-outline"></i><span class="value">Seg-Sex</span>
+                                                </div>
+                                            </div>
+                                            <div class="row atendimento-title">
+                                                <div class="col-md-6">
+                                                    <span class="title">Horario</span>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <span class="title">Dias</span>
+                                                </div>
+                                            </div>
+                                            <h5>Principais atendimentos</h5>
+                                            <p class="card-text especialidades">Atividades de promoção a saúde: hiperbetes, pro-vacina, peso, prosab,...
+                                                <button class="btn btn-link btn-sm" role="button" data-toggle="collapse" data-target="#espec3" aria-expanded="false" aria-controls="collapseExample">
+                                                    Ver mais
+                                                </button>
+                                            </p>
+                                            <div class="collapse" id="espec3">
+                                                <div class="card card-body">
+                                                    <p class="card-text especialidades">pronutricurso de gestante, saúde da mulher,“tenda social”, pas, “mais saudável sem cigarro”. Atendimento AMBULATORIAL: Consultas em clínica médica, ginecologia, psiquiatria, odontologia, enfermagem e nutrição.</p>
+                                                </div>
+                                            </div>
+                                            </p>
+                                            <footer class="content__footer">
+                                                <div class="row">
+                                                    <div class="col-md-12">
+                                                        <a href="https://goo.gl/maps/YGpwTR9nDhCADmig8" target="_blank"><i class="ion ion-ios-map-outline"><span class="value">Rua das Artes - Lagoa Nova, Natal/RN, Diretoria de Atenção à Saúde do Servidor - DAS. Campus Central UFRN</span></i></a>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-md-12">
+                                                        <i class="ion ion-ios-call-outline"><span class="value">(84)3342-2330</span></i>
+                                                    </div>                                                    
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-md-5 ml-auto">
+                                                        <a href="#" rel="Ver mais">Saiba mais</a>
+                                                    </div>
+                                                </div>
+                                            </footer>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="carousel-item col-md-4">
+                                    <div class="card service">
+                                        <div class="image_service">
+                                            <img src="https://scontent.frec10-1.fna.fbcdn.net/v/t1.0-9/20992720_1652716201428268_7514421742851015692_n.png?_nc_cat=108&amp;_nc_oc=AQmd8qI-Axs_xcBcSdcsnMwZGYFJoH6EI3JWr1JkIrlM4FSPy51o9k1orCUZMS0qjCQ&amp;_nc_ht=scontent.frec10-1.fna&amp;oh=b63f5efece1555183450fea3381529af&amp;oe=5DC574EC"
+                                                 alt="Strawberry Waffle" />
+                                        </div>
+                                        <div class="card-body">
+                                            <div class="row-wrapper">
+                                                <h3 class="recipe-title">Coordenadoria de Atenção Psicossocial ao Servidor - COAPS</h3>
+                                            </div>
+                                            <hr>
+                                            <div class="row atendimento-valor">
+                                                <div class="col-md-6">
+                                                    <i class="ion ion-ios-clock-outline"></i><span class="value">8h - 16h</span>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <i class="ion ion-ios-calendar-outline"></i><span class="value">Seg-Sex</span>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-md-6">
+                                                    <span><small style="font-size: 10px">12h-13h(almoço)</small></span>
+                                                </div>
+                                                <div class="col-md-6">
+
+                                                </div>
+                                            </div>
+                                            <div class="row atendimento-title">
+                                                <div class="col-md-6">
+                                                    <span class="title">Horario</span>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <span class="title">Dias</span>
+                                                </div>
+                                            </div>
+                                            <h5>Principais atendimentos</h5>
+                                            <p class="card-text especialidades">Programa Vida com Maturidade, Por Amor a vida, Psicoterapia de Grupo, suporte a perícia em saúde.</p>
+                                            <footer class="content__footer">
+                                                <div class="row">
+                                                    <div class="col-md-12">
+                                                        <a href="https://goo.gl/maps/YGpwTR9nDhCADmig8" target="_blank"><i class="ion ion-ios-map-outline"><span class="value">Rua das Artes - Lagoa Nova, Natal/RN, Diretoria de Atenção à Saúde do Servidor - DAS.</span></i></a>
+                                                    </div>
+                                                </div>
+                                                <div class="row" style="margin-top: 22px">
+                                                    <div class="col-md-12">
+                                                        <i class="ion ion-ios-call-outline"><span class="value">(84)991936320</span></i>
+                                                    </div>                                                    
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-md-5 ml-auto">
+                                                        <a href="#" rel="Ver mais">Saiba mais</a>
+                                                    </div>
+                                                </div>
+                                            </footer>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="carousel-item col-md-4">
+                                    <div class="card service">
+                                        <div class="image_service">
+                                            <img src="https://scontent.frec10-1.fna.fbcdn.net/v/t1.0-9/20992720_1652716201428268_7514421742851015692_n.png?_nc_cat=108&amp;_nc_oc=AQmd8qI-Axs_xcBcSdcsnMwZGYFJoH6EI3JWr1JkIrlM4FSPy51o9k1orCUZMS0qjCQ&amp;_nc_ht=scontent.frec10-1.fna&amp;oh=b63f5efece1555183450fea3381529af&amp;oe=5DC574EC"
+                                                 alt="Strawberry Waffle" />
+                                        </div>
+                                        <div class="card-body">
+                                            <div class="row-wrapper">
+                                                <h3 class="recipe-title">Setor de Saúde /Coord. de Políticas Estudantis/EAJ.</h3>
+                                            </div>
+                                            <hr>
+                                            <div class="row atendimento-valor">
+                                                <div class="col-md-6">
+                                                    <i class="ion ion-ios-clock-outline"></i><span class="value">7h - 16h</span>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <i class="ion ion-ios-calendar-outline"></i><span class="value">Seg-Sex</span>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-md-6">
+                                                    <span><small style="font-size: 10px">12h-13h(almoço)</small></span>
+                                                </div>
+                                                <div class="col-md-6">
+
+                                                </div>
+                                            </div>
+                                            <div class="row atendimento-title">
+                                                <div class="col-md-6">
+                                                    <span class="title">Horario</span>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <span class="title">Dias</span>
+                                                </div>
+                                            </div>
+                                            <h5>Principais atendimentos</h5>
+                                            <p class="card-text especialidades">Atendimento médico na área de clínica geral e de enfermagem, ambos com ações inseridas no nível de atenção básica ambulatorial.</p>
+                                            <footer class="content__footer">
+                                                <div class="row">
+                                                    <div class="col-md-12">
+                                                        <a href="https://goo.gl/maps/nAZv9r8aJbPdqp6f7" target="_blank"><i class="ion ion-ios-map-outline"><span class="value">RN 160, Distrito de Jundiaí-Macaíba/RN, Escola Agrícola de Jundiaí.</span></i></a>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-md-12">
+                                                        <i class="ion ion-ios-call-outline"><span class="value">(84)3342-2297 / (84)99229-6482</span></i>
+                                                    </div>                                                   
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-md-5 ml-auto">
+                                                        <a href="#" rel="Ver mais">Saiba mais</a>
+                                                    </div>
+                                                </div>
+                                            </footer>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="carousel-item col-md-4">
+                                    <div class="card service">
+                                        <div class="image_service">
+                                            <img src="https://scontent.frec10-1.fna.fbcdn.net/v/t1.0-9/20992720_1652716201428268_7514421742851015692_n.png?_nc_cat=108&amp;_nc_oc=AQmd8qI-Axs_xcBcSdcsnMwZGYFJoH6EI3JWr1JkIrlM4FSPy51o9k1orCUZMS0qjCQ&amp;_nc_ht=scontent.frec10-1.fna&amp;oh=b63f5efece1555183450fea3381529af&amp;oe=5DC574EC"
+                                                 alt="Strawberry Waffle" />
+                                        </div>
+                                        <div class="card-body">
+                                            <div class="row-wrapper">
+                                                <h3 class="recipe-title">Laboratório Integrado de Análises Clínicas (LIAC).</h3>
+                                            </div>
+                                            <hr>
+                                            <div class="row atendimento-valor">
+                                                <div class="col-md-6">
+                                                    <i class="ion ion-ios-clock-outline"></i><span class="value">7h - 15h</span>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <i class="ion ion-ios-calendar-outline"></i><span class="value">Seg-Sex</span>
+                                                </div>
+                                            </div>
+                                            <div class="row atendimento-title">
+                                                <div class="col-md-6">
+                                                    <span class="title">Horario</span>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <span class="title">Dias</span>
+                                                </div>
+                                            </div>
+                                            <h5>Principais atendimentos</h5>
+                                            <p class="card-text especialidades">Exames das áreas de: Bioquímica Clínica, Hematologia Clínica, Imunologia Clínica, ...
+                                                <button class="btn btn-link btn-sm" type="button" data-toggle="collapse" data-target="#espec5" aria-expanded="false" aria-controls="collapseExample">
+                                                    Ver mais
+                                                </button>
+                                            </p>
+                                            <div class="collapse" id="espec5">
+                                                <div class="card card-body">
+                                                    <p class="card-text especialidades">Parasitologia Clínica e Uroanálises.</p>
+                                                </div>
+                                            </div>
+                                            </p>
+                                            <footer class="content__footer">
+                                                <div class="row">
+                                                    <div class="col-md-12">
+                                                        <a href="https://goo.gl/maps/DQEgrjk4mWbxuJDf8" target="_blank"><i class="ion ion-ios-map-outline"><span class="value">Rua General Gustavo Cordeiro de Farias, Petrópolis - subsolo da Faculdade de Farmácia (Centro de Ciências da Saúde).</span></i></a>
+                                                    </div>
+                                                </div>
+                                                <div class="row" style="margin-top: 10px">
+                                                    <div class="col-md-12">
+                                                        <i class="ion ion-ios-call-outline"><span class="value">(84)33429830</span></i>
+                                                    </div>                                                 
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-md-5 ml-auto">
+                                                        <a href="#" rel="Ver mais">Saiba mais</a>
+                                                    </div>
+                                                </div>
+                                            </footer>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                
+                            </div>
+                            <a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev" style="width:auto">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="sr-only">Previous</span>
+                            </a>
+                            <a class="carousel-control-next" href="#myCarousel" role="button" data-slide="next" style="width:auto">
+                                <span class="carousel-control-next-icon" aria-hidden="true" ></span>
+                                <span class="sr-only">Next</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+	<section id="parallax2" style="background: #008080;">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12 col-sm-12 text-white text-center">       
+					<h2 class="text-white">Fale Conosco!</h2>
+					<p class="lead">Tiraremos suas dúvidas</p>
+					<h3 class="text-white">(84) 99229-6606 <br> equipesigsaude@imd.ufrn.br</h3>
+				</div>
+			</div>
+		</div>
+	</section>
+	
+	<footer class="footer bg-dark text-white">
+		<div class="container p-3 text-right">
+			<div class="row">
+				<div class="col">
+					<b><a class="text-white" href="https://dti.imd.ufrn.br/">SigSaúde -</a> <a class="text-white" href="https://portal.imd.ufrn.br">IMD</a></b>
+					<p>Copyright <i class="fa fa-copyright" aria-hidden="true"></i> 2018</p>
+				</div>
+			</div>
+		</div>
+	</footer>
+
+  	<script src="site/js/accessibillity.js}"></script>
+</body>
+<script type="text/javascript">
+$(document).ready(function() {
+	  $("#myCarousel").on("slide.bs.carousel", function(e) {
+	    var $e = $(e.relatedTarget);
+	    var idx = $e.index();
+	    var itemsPerSlide = 3;
+	    var totalItems = $(".carousel-item").length;
+
+	    if (idx >= totalItems - (itemsPerSlide - 1)) {
+	      var it = itemsPerSlide - (totalItems - idx);
+	      for (var i = 0; i < it; i++) {
+	        // append slides to end
+	        if (e.direction == "left") {
+	          $(".carousel-item")
+	            .eq(i)
+	            .appendTo(".carousel-inner");
+	        } else {
+	          $(".carousel-item")
+	            .eq(0)
+	            .appendTo($(this).find(".carousel-inner"));
+	        }
+	      }
+	    }
+	  });
+	});
+    
+  //Contagem na div de dados sobre o sistema  
+    (function($){
+    	  $(window).on("load",function(){
+    	    $(document).scrollzipInit();
+    	    $(document).rollerInit();
+    	  });
+    	  $(window).on("load scroll resize", function(){
+    	    $('.numscroller').scrollzip({
+    	      showFunction    :   function() {
+    	        numberRoller($(this).attr('data-slno'));
+    	      },
+    	      wholeVisible    :     false,
+    	    });
+    	  });
+    	  $.fn.scrollzipInit=function(){
+    	    $('body').prepend("<div style='position:fixed;top:0px;left:0px;wid0;height:0;' id='scrollzipPoint'></div>" );
+    	  };
+    	  $.fn.rollerInit=function(){
+    	    var i=0;
+    	    $('.numscroller').each(function() {
+    	      i++;
+    	      $(this).attr('data-slno',i); 
+    	      $(this).addClass("roller-title-number-"+i);
+    	    });        
+    	  };
+    	  $.fn.scrollzip = function(options){
+    	    var settings = $.extend({
+    	      showFunction    : null,
+    	      hideFunction    : null,
+    	      showShift       : 0,
+    	      wholeVisible    : false,
+    	      hideShift       : 0,
+    	    }, options);
+    	    return this.each(function(i,obj){
+    	      $(this).addClass('scrollzip');
+    	      if ( $.isFunction( settings.showFunction ) ){
+    	        if(
+    	          !$(this).hasClass('isShown')&&
+    	          ($(window).outerHeight()+$('#scrollzipPoint').offset().top-settings.showShift)>($(this).offset().top+((settings.wholeVisible)?$(this).outerHeight():0))&&
+    	          ($('#scrollzipPoint').offset().top+((settings.wholeVisible)?$(this).outerHeight():0))<($(this).outerHeight()+$(this).offset().top-settings.showShift)
+    	        ){
+    	          $(this).addClass('isShown');
+    	          settings.showFunction.call( this );
+    	        }
+    	      }
+    	      if ( $.isFunction( settings.hideFunction ) ){
+    	        if(
+    	          $(this).hasClass('isShown')&&
+    	          (($(window).outerHeight()+$('#scrollzipPoint').offset().top-settings.hideShift)<($(this).offset().top+((settings.wholeVisible)?$(this).outerHeight():0))||
+    	           ($('#scrollzipPoint').offset().top+((settings.wholeVisible)?$(this).outerHeight():0))>($(this).outerHeight()+$(this).offset().top-settings.hideShift))
+    	        ){
+    	          $(this).removeClass('isShown');
+    	          settings.hideFunction.call( this );
+    	        }
+    	      }
+    	      return this;
+    	    });
+    	  };
+    	  function numberRoller(slno){
+    	    var min=$('.roller-title-number-'+slno).attr('data-min');
+    	    var max=$('.roller-title-number-'+slno).attr('data-max');
+    	    var timediff=$('.roller-title-number-'+slno).attr('data-delay');
+    	    var increment=$('.roller-title-number-'+slno).attr('data-increment');
+    	    var numdiff=max-min;
+    	    var timeout=(timediff*1000)/numdiff;
+    	    //if(numinc<10){
+    	    //increment=Math.floor((timediff*1000)/10);
+    	    //}//alert(increment);
+    	    numberRoll(slno,min,max,increment,timeout);
+
+    	  }
+    	  function numberRoll(slno,min,max,increment,timeout){//alert(slno+"="+min+"="+max+"="+increment+"="+timeout);
+    	    if(min<=max){
+    	      $('.roller-title-number-'+slno).html(min);
+    	      min=parseInt(min)+parseInt(increment);
+    	      setTimeout(function(){numberRoll(eval(slno),eval(min),eval(max),eval(increment),eval(timeout))},timeout);
+    	    }else{
+    	      $('.roller-title-number-'+slno).html(max);
+    	    }
+    	  }
+    	})(jQuery);
+	
+  //Função para fechar (recolher) menu mobile
+    function myFunction() {
+    	  var x = document.getElementById("navbarSupportedContent");
+    	  if (x.style.display === "block") {
+    	    x.style.display = "none";
+    	  } else {
+    	    x.style.display = "block";
+    	  }
+    	}
+  
+  //Galeria
+    $(document).ready(function(){
+
+        $(".filter-button").click(function(){
+            var value = $(this).attr('data-filter');
+            
+            if(value == "all")
+            {
+                //$('.filter').removeClass('hidden');
+                $('.filter').show('1000');
+            }
+            else
+            {
+//                $('.filter[filter-item="'+value+'"]').removeClass('hidden');
+//                $(".filter").not('.filter[filter-item="'+value+'"]').addClass('hidden');
+                $(".filter").not('.'+value).hide('3000');
+                $('.filter').filter('.'+value).show('3000');
+                
+            }
+        });
+        
+        if ($(".filter-button").removeClass("active")) {
+			$(this).removeClass("active");
+		}
+		
+        $(this).addClass("active");	
+	    
+    });
+
+$(function(){
+    $("[data-toggle=popover]").popover({
+        html : true,
+        trigger:'hover',
+        content: function() {
+          var content = $(this).attr("data-popover-content");
+          return $(content).children(".popover-body").html();
+        },
+        title: function() {
+          var title = $(this).attr("data-popover-content");
+          return $(title).children(".popover-heading").html();
+        }
+    });
+});
+
+</script>
+</html>
+
+<!-- <div class="heading text-center">
+                        <h2>Encontre sua Unidade</h2>
+                        <p>Reiciendis neque sit incidunt doloremque ipsum, at reprehenderit sed laboriosam accusantium labore assumenda, odio quos alias! Dolores labore quasi fuga quis aperiam.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-10 m-auto">
+                    <div class="row">
+                        <div class="col-sm-4 col-md-4">
+                            <div class="service-box2">
+                                <img src="site/img/service/img1.jpg}" alt="" class="img-fluid">
+
+                                <div class="service-content">
+                                    <h4>Primary care</h4>
+                                    <p>Blanditiis maiores asperiores animi. Consequatur alias dolore dignissimos nulla reiciendis corporis dolorum</p>
+                                </div>
+                            </div>
+                        </div>
+                         <div class="col-sm-4 col-md-4">
+                            <div class="service-box2">
+                               <img src="site/img/service/img2.jpg}" alt="" class="img-fluid">
+                                <div class="service-content">
+                                    <h4>Cardiologia</h4>
+                                    <p>Blanditiis maiores asperiores animi. Consequatur alias dolore dignissimos nulla reiciendis corporis dolorum</p>
+                                </div>
+                            </div>
+                        </div>
+                         <div class="col-sm-4 col-md-4">
+                            <div class="service-box2">
+                               <img src="site/img/service/img3.jpg}" alt="" class="img-fluid">
+                                <div class="service-content">
+                                    <h4>Teste de Sangue</h4>
+                                    <p>Blanditiis maiores asperiores animi. Consequatur alias dolore dignissimos nulla reiciendis corporis dolorum</p>
+                                </div>
+                            </div>
+                        </div>
+
+                       
+
+                         <div class="col-sm-4 col-md-4">
+                            <div class="service-box2">
+                               <img src="site/img/service/img4.jpg}" alt="" class="img-fluid">
+
+                                <div class="service-content">
+                                    <h4>Laboratório</h4>
+                                    <p>Blanditiis maiores asperiores animi. Consequatur alias dolore dignissimos nulla reiciendis corporis dolorum</p>
+                                </div>
+                            </div>
+                        </div>
+
+                         <div class="col-sm-4 col-md-4">
+                            <div class="service-box2">
+                              <img src="site/img/service/img5.jpg}" alt="" class="img-fluid">
+                                <div class="service-content">
+                                    <h4>MRI Ressonância</h4>
+                                    <p>Blanditiis maiores asperiores animi. Consequatur alias dolore dignissimos nulla reiciendis corporis dolorum</p>
+                                </div>
+                            </div>
+                        </div>
+                         <div class="col-sm-4 col-md-4">
+                            <div class="service-box2">
+                              <img src="site/img/sepa.png}" alt="" class="img-fluid" style="wid 200px">
+                                <div class="service-content">
+                                    <h4>SEPA</h4>
+                                    <p>Blanditiis maiores asperiores animi. Consequatur alias dolore dignissimos nulla reiciendis corporis dolorum</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div> -->

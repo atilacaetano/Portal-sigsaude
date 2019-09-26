@@ -1,0 +1,48 @@
+/*
+*	Menu Horizontal do Portal
+*/
+#menu{
+	width: 100%;
+	top: 0;
+	left: 0;
+	position: fixed;
+	z-index: 99;
+}
+#menu nav {
+	background: #fff;
+	z-index: 10;
+}
+#menu .navbar-brand img {
+    width: 60%;
+}
+#menu .nav-item .nav-link {
+	/*color: #767e57;*/
+}
+#menu .nav-item .nav-link:hover {
+	/*color: #4e5436;*/
+}
+#menu .nav-item .nav-link:active {
+	font-weight: bold;
+}
+#menu #btn-login a {
+	color: white;
+}
+#menu #btn-login {
+	padding: 0 .825rem;
+	border-radius: 20px;
+	border-color: #929678;
+	background-color: #929678;	
+	color: white;
+}
+#menu #btn-login:hover {
+	border-color: #4e5436;
+	background-color: #4e5436;
+}
+#menu #btn-login:active {
+	border-color: #767e57;
+	background-color: #767e57;
+}
+
+.contrast #menu nav {
+	background: black;
+}

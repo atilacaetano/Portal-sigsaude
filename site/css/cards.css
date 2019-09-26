@@ -1,0 +1,132 @@
+/**
+* Cards
+*/
+
+.media {
+	background-size: contain;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+
+.card-body {
+	position: relative;
+}
+
+.card-body:after {
+	content: "";
+	display: block;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 1.25rem;
+	pointer-events: none;
+	background: -webkit-gradient(linear, left bottom, left top, from(rgba(255,255,255, 1)), to(rgba(255,255,255,0)));
+	background: -webkit-linear-gradient(bottom, rgba(255,255,255, 1), rgba(255,255,255,0));
+	background: -o-linear-gradient(bottom, rgba(255,255,255, 1), rgba(255,255,255,0));
+	background: linear-gradient(to top, rgba(255,255,255, 1), rgba(255,255,255,0));
+}
+
+.contrast .card-body:after {
+	background: black !important;
+}
+
+.contrast .card {
+	background: black !important;
+	border: 1px solid white;
+}
+
+/* CARD-IMG */
+
+.card-img {
+	/*altura do card*/
+    height: 150px;
+    width: 150px;
+    overflow: hidden;
+}
+
+.card-img .media {
+	/*altura da imagem*/
+    -ms-flex-preferred-size: 150px;
+    flex-basis: 150px;
+    margin: 35px;
+}
+
+.card-img .card-img-overlay {
+	background: rgba(0, 0, 0, .8);
+	color: white;
+	opacity: 0;
+	transition: opacity .3s;
+}
+
+.card-img:hover .card-img-overlay {
+	opacity: 1;
+}
+
+.contrast .card-img .card-img-overlay {
+	background: black !important;
+}
+
+/* CARD-VAGAS */
+
+.card-vagas-img .media {
+	width: calc(100% - 30px);
+	height: 200px;
+	margin: 15px;
+}
+
+.card-vagas-img .card-body {
+	max-height: 200px;
+	overflow: hidden;
+}
+	
+.card-vagas .card-body {
+	max-height: 400px;
+	overflow: hidden;
+}
+	
+@media (min-width: 768px) {
+	
+	.card-vagas .card-body, 
+	.card-vagas-img .card-body {
+		overflow: visible;
+	}
+	
+	.card-vagas, 
+	.card-vagas-img {
+		height: 200px;
+		overflow: hidden;
+	}
+
+	.card-vagas-img .media {
+		flex-basis: 25%;
+		height: auto;
+	}
+	
+	.card-vagas .card-body:nth-last-of-type(2) {
+		flex-basis: 75%;
+	}
+	
+	.card-vagas-img .card-body:nth-last-of-type(2) {
+		flex-basis: 100%;
+	}
+	
+	.card-vagas .card-body:nth-last-of-type(1),
+	.card-vagas-img .card-body:nth-last-of-type(1) {
+		flex-grow: 0;
+	}
+	
+}
+
+.card-vagas .list-group-actions,
+.card-vagas-img .list-group-actions {
+	position: absolute;
+	top: 0;
+	right: 0;
+	flex-direction: row;
+}
+
+ .list-group-actions .list-group-item {
+ 	padding: 2px;
+ 	border: none;
+ }

@@ -1,0 +1,60 @@
+/**
+Typography
+*/
+
+body {
+	font-family: "Open Sans", Arial, sans-serif;
+}
+
+.display-1,
+.display-2, 
+.display-3, 
+.display-4 {
+	text-transform: uppercase;
+	font-weight: bold;
+}
+
+.display-4 {
+	font-size: 2.5em;
+}
+
+h1, .h1 {
+	font-size: 1.875em;
+	font-weight: bold;
+}
+
+h2, .h2 {
+	font-size: 1.3em;
+	font-weight: bold;
+}
+
+h3, .h3 {
+	font-size: 1.125em;
+	font-weight: bold;
+}
+
+h4, .h4 {
+	font-size: 1em;
+	font-weight: bold;
+}
+
+h5, .h5 {
+	font-size: 1em;
+	font-weight: bold;
+}
+
+h6, .h6 {
+	font-size: 1em;
+	font-weight: normal;
+}
+
+p {
+	font-size: 1em;
+	line-height: 1.6em;
+}
+
+.lead {
+	font-size: 1.5625em;
+	font-family: 'Dosis', sans-serif;
+}
+

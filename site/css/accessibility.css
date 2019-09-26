@@ -1,0 +1,100 @@
+/*
+*	Barra de Acessibilidade e Menu Universal
+*/
+
+#accessibility {
+    background: #E6E6E6;
+    color: white;
+    z-index: 1031;
+    position: relative;
+    height: 2rem;
+}
+
+#accessibility .instituicao {
+	height: 2rem;
+	display: inline-block;
+	vertical-align: middle;
+	line-height: 2;
+	padding: 0 10px;
+	color: #9C9C9C;
+	font-weight: bold;
+}
+
+#accessibility .instituicao:hover {
+	color: #202121;
+	text-decoration: none;
+}
+
+#accessibility .instituicao:first-child {
+	padding-left: 0;
+}
+
+#accessibility .btn-onlyicon {
+	background: none;
+	border: none;
+	color: #9C9C9C;
+}
+.border-left {
+  border-left: 1px solid #dee2e6 !important;
+}
+#accessibility .btn-onlyicon:hover {
+	color: #202121;
+}
+
+
+.contrast #accessibility {
+	background: black;
+}
+
+.contrast #accessibility  .instituicao {
+	color: yellow !important;
+}
+
+/* ALTO CONTRASTE
+ * https://medium.com/hash-js/implemente-uma-vers%C3%A3o-de-alto-contraste-no-seu-site-dcef330a09fd
+*/
+
+.contrast {
+	background: black !important;
+	color: white !important;
+}
+
+/*Imagens*/
+
+.contrast .on-contrast-force-gray {
+	-webkit-filter: grayscale(100%) contrast(120%);
+	filter: grayscale(100%) contrast(120%);
+}
+
+.contrast .on-contrast-force-white {
+	-webkit-filter: brightness(0) invert(1);
+	filter: brightness(0) invert(1);
+}
+
+/*Campos de formulário*/
+
+.contrast input[type=text],
+.contrast input[type=password],
+.contrast input[type=url],.border-left {
+  border-left: 1px solid #dee2e6 !important;
+}
+.contrast input[type=search],
+.contrast input[type=email],
+.contrast input[type=tel],
+.contrast input[type=date],
+.contrast input[type=month],
+.contrast input[type=week],
+.contrast input[type=datetime],
+.contrast input[type=datetime-local],
+.contrast textarea,
+.contrast input[type=number],
+.contrast select {
+    background: black !important;
+    border: 1px solid white !important;
+    color: white !important;
+}
+
+/* Borda entre  UFRN e IMD */
+.border-left {
+  border-left: 1px solid #C7C7C7 !important;
+}
