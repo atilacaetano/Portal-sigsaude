@@ -1236,6 +1236,9 @@ p {
     .banner-content h1 {        
         font-size: 2.5rem;
     }
+    .content-padding {
+        padding: 65px 0px;
+    }
 }
 .banner-content h1 span {
     display: block;
@@ -2270,7 +2273,7 @@ figcaption > a {
 }
 
 /**** slider ****/
-/* #slider
+#slider
 {
 	margin: auto;
 	overflow: hidden;
@@ -2322,28 +2325,28 @@ figcaption > a {
     #slider {
         margin: auto;
         overflow: hidden;
-        width: 290px; */
+        width: 290px;
         /* padding: 60px;	 */
-        /* padding-bottom: 80px; 
+        padding-bottom: 125px; 
         position: relative;                
     }
     #slider h1{        	
       width: 290px;;                      
     }
-} */
+}
 /* Content */
 
-/* .slider-container
+.slider-container
 {
 	margin: 0 auto;
 	padding: 0;	
     min-height: 180px;
 
-} */
+}
 
 /*** target hooks ****/
 
-/* @-webkit-keyframes slide-animation {
+@-webkit-keyframes slide-animation {
 	0% {opacity:0;}
 	2% {opacity:1;}
 	20% {left:0px; opacity:1;}
@@ -2363,11 +2366,11 @@ figcaption > a {
 #slider ul
 {
 	-webkit-animation: slide-animation 25s infinite;
-}  */
+} 
 
 /* use to paused the content on mouse over */
 
-/* #slider ul:hover
+#slider ul:hover
 {
 	-moz-animation-play-state: paused;
 	-webkit-animation-play-state: paused;
@@ -2379,30 +2382,218 @@ figcaption > a {
  border: 1px solid #ccc;
  padding: 10px 15px;
  background-color: #7effca;
-}  */
+}
 
+ /* #### COLLAPSE #### */
 
-/* <div class="row" id="slider">
-                            <ul>
-                                <li>
-                                <div class="col-md-12 slider-container">
-                                    <h1>Pure CSS slider Content</h1>
-                                </div>
-                                </li>
-                                    <li>
-                                <div class=" col-md-12 slider-container">
-                                   <h1>Pure CSS slider Content</h1>
-                                </div>
-                                </li>
-                                    <li>
-                                <div class="col-md-12 slider-container">
-                                   <h1>Pure CSS slider Content</h1>
-                                </div>
-                                </li>
-                                    <li>
-                                <div class="col-md-12 slider-container">
-                                  <h1>Pure CSS slider Content</h1>
-                                </div>
-                                </li>
-                            </ul>
-                        </div> */
+.sh-accordion .panel-default, .sh-accordion .panel, .sh-accordion .panel-heading {
+    border-radius: 0;
+    padding: 0;
+    border: none;
+}
+.sh-accordion .panel {
+    box-shadow: none;
+    background-color: transparent;
+}
+.sh-accordion .panel {
+    margin: 0!important;
+}
+
+.sh-accordion .panel-default>.panel-heading {
+    background-color: transparent;
+}
+.sh-accordion .panel-default, .sh-accordion .panel, .sh-accordion .panel-heading {
+    border-radius: 0;
+    padding: 0;
+    border: none;
+}
+.panel-default>.panel-heading {
+    color: #333;
+}
+.panel-title {
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: 16px;
+    color: inherit;
+}
+#accordion-prjO8yWfwL.sh-accordion .panel-title a, #accordion-prjO8yWfwL.sh-accordion .panel-title a i {
+    color: #333;
+    background-color: #ccd6d6;
+}
+.sh-accordion-style6 .panel-title a {
+    padding: 10px 20px;
+    border-radius: 8px;
+}
+.sh-accordion .panel-title a {
+    display: block;
+}
+.collapse.in {
+    display: block;
+}
+.sh-accordion .panel .panel-collapse .panel-body {
+    border-top-color: transparent;
+    border-radius: 0;
+    background-color: #fff;
+}
+.sh-accordion-style6 .sh-accordion-item .panel-body {
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+.panel-body {
+    padding: 15px;
+}
+.sh-accordion .panel .panel-collapse .panel-body {
+    border-top-color: transparent;
+    border-radius: 0;
+    background-color: #fff;
+}
+
+.sh-accordion-style6 .sh-accordion-item .panel-body {
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+#accordion-prjO8yWfwL.sh-accordion .panel-title a.collapsed, #accordion-prjO8yWfwL.sh-accordion .panel-title a.collapsed i {
+    color: #505050;
+    background-color: #fff;
+}
+.sh-table {
+    display: table;
+    width: 100%;
+}
+.sh-accordion .sh-accordion-icon-cell {
+    padding-right: 20px;
+}
+.sh-table-cell {
+    display: table-cell;
+    vertical-align: middle;
+    float: none!important;
+}
+.sh-table-cell {
+    display: table-cell;
+    vertical-align: middle;
+    float: none!important;
+}
+.sh-accordion-content-cell {
+    width: 100%;
+}
+.sh-accordion .sh-accordion-icon {
+    display: inline-block;
+}
+.sh-accordion .collapsed .open-icon, .sh-accordion .close-icon {
+    display: inline-block;
+}
+:after, :before {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+:after, :before {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+.sh-accordion .collapsed .close-icon, .sh-accordion .open-icon {
+    display: none;
+}
+.sh-accordion .collapsed .close-icon, .sh-accordion .open-icon {
+    display: none;
+}
+.sh-accordion-title{
+    font-size: 22px;
+}
+#heading-1MPu3GXnmj .sh-heading-content {
+    font-weight: 200!important;
+    color: #363636;
+}
+b, strong {
+    font-weight: 700;
+}
+.sh-accordion{
+    margin-top: 40px;
+}
+.fadeInRight {
+    -webkit-animation-name: fadeInRight;
+    animation-name: fadeInRight;
+}
+.animated {
+    -webkit-animation-duration: 1s !important;
+    animation-duration: 3s !important;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: both;
+}
+.fadeInRight {
+    -webkit-animation-name: fadeInRight;
+    animation-name: fadeInRight;
+}
+.vc_column-inner::after, .vc_column-inner::before {
+    content: " ";
+    display: table;
+}
+.vc_column-inner::after {
+    clear: both;
+}
+.wpb_start_animation {
+    opacity: 1;
+}
+.vc_column_container {
+    padding-left: 0;
+    padding-right: 0;
+}
+@media (min-width: 768px){
+    .vc_col-sm-4 {
+        width: 33.33333333%;
+    }
+}
+@media (min-width: 768px){
+    .vc_col-sm-1, .vc_col-sm-10, .vc_col-sm-11, .vc_col-sm-12, .vc_col-sm-2, .vc_col-sm-3, .vc_col-sm-4, .vc_col-sm-5, .vc_col-sm-6, .vc_col-sm-7, .vc_col-sm-8, .vc_col-sm-9 {
+        float: left;
+    }
+}
+.collapse.in {
+    display: block;
+}
+/* #entrar-btn a{
+    font-weight: bold;
+    font-size: 20px;
+    color: #008080;
+    border: 1px solid #008080;
+    border-radius: 15%;
+}
+#entrar-btn a:hover{
+    font-weight: bold;
+    font-size: 22px;
+    color: #008080;
+} */
+.slider-info{
+    padding-right: 20%;
+}
+@media (max-width: 576px) {
+    .slider-info{
+        padding-right: 0px;
+    }    
+}
+@media (min-width: 768px){
+    .slider-info{
+        padding-right: 10%;
+    }
+}
+@media (max-width: 768px){
+    #slider{
+        margin-left: -85px;
+    }
+}
+@media (max-width: 576px) {
+    #slider{
+        margin-left: 0px;
+    }
+}
+@media (max-width: 320px) {
+    #slider{
+        margin-left: -15px;
+    }
+}
+@media (max-width: 376px) {
+    #slider{
+        margin-left: 10px;
+    }
+}
